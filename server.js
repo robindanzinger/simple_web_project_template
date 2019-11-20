@@ -17,8 +17,8 @@ app.get("/page/:filename", function (req, res) {
   res.send(renderPage(html))
 })
 function renderPage(html) {
-  const prehtml = ""
-  const posthtml = ""
+  const prehtml = fs.readFileSync(`./pre.html`, 'utf-8')
+  const posthtml = fs.readFileSync(`./post.html`, 'utf-8')
   return `${prehtml}
           ${html}
           <script src="/reloadpage.js"></script>

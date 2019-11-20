@@ -20,7 +20,7 @@ function buildjs() {
 }
 
 function buildcss() {
-  return gulp.src('src/*.css')
+  return gulp.src('src/css/*.css')
     .pipe(autoprefixer())
     .pipe(csso())
     .pipe(gulp.dest('dist/css'));
